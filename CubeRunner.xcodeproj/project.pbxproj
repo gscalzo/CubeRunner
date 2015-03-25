@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1C793BE5F77E8E1E87217EBC /* Pods_CubeRunner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 874A0E308794DDCC3B30C485 /* Pods_CubeRunner.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		EEE4BE551AC366C200A8A5BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4BE541AC366C200A8A5BE /* AppDelegate.swift */; };
+		EEE4BE571AC366C200A8A5BE /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = EEE4BE561AC366C200A8A5BE /* art.scnassets */; };
+		EEE4BE591AC366C200A8A5BE /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4BE581AC366C200A8A5BE /* GameViewController.swift */; };
+		EEE4BE5C1AC366C200A8A5BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEE4BE5A1AC366C200A8A5BE /* Main.storyboard */; };
+		EEE4BE5E1AC366C200A8A5BE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEE4BE5D1AC366C200A8A5BE /* Images.xcassets */; };
+		EEE4BE611AC366C200A8A5BE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEE4BE5F1AC366C200A8A5BE /* LaunchScreen.xib */; };
+		EEE4BE6D1AC366C200A8A5BE /* CubeRunnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4BE6C1AC366C200A8A5BE /* CubeRunnerTests.swift */; };
+		EEE4BE771AC36BB400A8A5BE /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4BE761AC36BB400A8A5BE /* MenuViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EEE4BE671AC366C200A8A5BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEE4BE471AC366C200A8A5BE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EEE4BE4E1AC366C200A8A5BE;
+			remoteInfo = CubeRunner;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2B26CA3DDF9933AC9EE20C00 /* Pods-CubeRunner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CubeRunner.release.xcconfig"; path = "Pods/Target Support Files/Pods-CubeRunner/Pods-CubeRunner.release.xcconfig"; sourceTree = "<group>"; };
+		3B30102F5A987E0B94321F14 /* Pods-CubeRunner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CubeRunner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CubeRunner/Pods-CubeRunner.debug.xcconfig"; sourceTree = "<group>"; };
+		874A0E308794DDCC3B30C485 /* Pods_CubeRunner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CubeRunner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEE4BE4F1AC366C200A8A5BE /* CubeRunner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CubeRunner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEE4BE531AC366C200A8A5BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEE4BE541AC366C200A8A5BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EEE4BE561AC366C200A8A5BE /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		EEE4BE581AC366C200A8A5BE /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		EEE4BE5B1AC366C200A8A5BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EEE4BE5D1AC366C200A8A5BE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EEE4BE601AC366C200A8A5BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		EEE4BE661AC366C200A8A5BE /* CubeRunnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CubeRunnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEE4BE6B1AC366C200A8A5BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEE4BE6C1AC366C200A8A5BE /* CubeRunnerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CubeRunnerTests.swift; sourceTree = "<group>"; };
+		EEE4BE761AC36BB400A8A5BE /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EEE4BE4C1AC366C200A8A5BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C793BE5F77E8E1E87217EBC /* Pods_CubeRunner.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEE4BE631AC366C200A8A5BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9321EBA1FD29EDED1DD60233 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3B30102F5A987E0B94321F14 /* Pods-CubeRunner.debug.xcconfig */,
+				2B26CA3DDF9933AC9EE20C00 /* Pods-CubeRunner.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EEE4BE461AC366C200A8A5BE = {
+			isa = PBXGroup;
+			children = (
+				EEE4BE511AC366C200A8A5BE /* CubeRunner */,
+				EEE4BE691AC366C200A8A5BE /* CubeRunnerTests */,
+				EEE4BE501AC366C200A8A5BE /* Products */,
+				9321EBA1FD29EDED1DD60233 /* Pods */,
+				F978DBA7A8F8A74EFF4D0551 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EEE4BE501AC366C200A8A5BE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EEE4BE4F1AC366C200A8A5BE /* CubeRunner.app */,
+				EEE4BE661AC366C200A8A5BE /* CubeRunnerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EEE4BE511AC366C200A8A5BE /* CubeRunner */ = {
+			isa = PBXGroup;
+			children = (
+				EEE4BE761AC36BB400A8A5BE /* MenuViewController.swift */,
+				EEE4BE541AC366C200A8A5BE /* AppDelegate.swift */,
+				EEE4BE561AC366C200A8A5BE /* art.scnassets */,
+				EEE4BE581AC366C200A8A5BE /* GameViewController.swift */,
+				EEE4BE5A1AC366C200A8A5BE /* Main.storyboard */,
+				EEE4BE5D1AC366C200A8A5BE /* Images.xcassets */,
+				EEE4BE5F1AC366C200A8A5BE /* LaunchScreen.xib */,
+				EEE4BE521AC366C200A8A5BE /* Supporting Files */,
+			);
+			path = CubeRunner;
+			sourceTree = "<group>";
+		};
+		EEE4BE521AC366C200A8A5BE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EEE4BE531AC366C200A8A5BE /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EEE4BE691AC366C200A8A5BE /* CubeRunnerTests */ = {
+			isa = PBXGroup;
+			children = (
+				EEE4BE6C1AC366C200A8A5BE /* CubeRunnerTests.swift */,
+				EEE4BE6A1AC366C200A8A5BE /* Supporting Files */,
+			);
+			path = CubeRunnerTests;
+			sourceTree = "<group>";
+		};
+		EEE4BE6A1AC366C200A8A5BE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EEE4BE6B1AC366C200A8A5BE /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F978DBA7A8F8A74EFF4D0551 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				874A0E308794DDCC3B30C485 /* Pods_CubeRunner.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EEE4BE4E1AC366C200A8A5BE /* CubeRunner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EEE4BE701AC366C200A8A5BE /* Build configuration list for PBXNativeTarget "CubeRunner" */;
+			buildPhases = (
+				E0859D91C9FA80E8C1C94065 /* Check Pods Manifest.lock */,
+				EEE4BE4B1AC366C200A8A5BE /* Sources */,
+				EEE4BE4C1AC366C200A8A5BE /* Frameworks */,
+				EEE4BE4D1AC366C200A8A5BE /* Resources */,
+				BF211612EDE0AD2B544C16E1 /* Embed Pods Frameworks */,
+				BB02E596F22CDFEBCB72CC5F /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CubeRunner;
+			productName = CubeRunner;
+			productReference = EEE4BE4F1AC366C200A8A5BE /* CubeRunner.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EEE4BE651AC366C200A8A5BE /* CubeRunnerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EEE4BE731AC366C200A8A5BE /* Build configuration list for PBXNativeTarget "CubeRunnerTests" */;
+			buildPhases = (
+				EEE4BE621AC366C200A8A5BE /* Sources */,
+				EEE4BE631AC366C200A8A5BE /* Frameworks */,
+				EEE4BE641AC366C200A8A5BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EEE4BE681AC366C200A8A5BE /* PBXTargetDependency */,
+			);
+			name = CubeRunnerTests;
+			productName = CubeRunnerTests;
+			productReference = EEE4BE661AC366C200A8A5BE /* CubeRunnerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EEE4BE471AC366C200A8A5BE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "Effective Code";
+				TargetAttributes = {
+					EEE4BE4E1AC366C200A8A5BE = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					EEE4BE651AC366C200A8A5BE = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = EEE4BE4E1AC366C200A8A5BE;
+					};
+				};
+			};
+			buildConfigurationList = EEE4BE4A1AC366C200A8A5BE /* Build configuration list for PBXProject "CubeRunner" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EEE4BE461AC366C200A8A5BE;
+			productRefGroup = EEE4BE501AC366C200A8A5BE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EEE4BE4E1AC366C200A8A5BE /* CubeRunner */,
+				EEE4BE651AC366C200A8A5BE /* CubeRunnerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EEE4BE4D1AC366C200A8A5BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEE4BE611AC366C200A8A5BE /* LaunchScreen.xib in Resources */,
+				EEE4BE5E1AC366C200A8A5BE /* Images.xcassets in Resources */,
+				EEE4BE571AC366C200A8A5BE /* art.scnassets in Resources */,
+				EEE4BE5C1AC366C200A8A5BE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEE4BE641AC366C200A8A5BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BB02E596F22CDFEBCB72CC5F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CubeRunner/Pods-CubeRunner-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF211612EDE0AD2B544C16E1 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CubeRunner/Pods-CubeRunner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0859D91C9FA80E8C1C94065 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EEE4BE4B1AC366C200A8A5BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEE4BE591AC366C200A8A5BE /* GameViewController.swift in Sources */,
+				EEE4BE771AC36BB400A8A5BE /* MenuViewController.swift in Sources */,
+				EEE4BE551AC366C200A8A5BE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEE4BE621AC366C200A8A5BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEE4BE6D1AC366C200A8A5BE /* CubeRunnerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EEE4BE681AC366C200A8A5BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EEE4BE4E1AC366C200A8A5BE /* CubeRunner */;
+			targetProxy = EEE4BE671AC366C200A8A5BE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EEE4BE5A1AC366C200A8A5BE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EEE4BE5B1AC366C200A8A5BE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EEE4BE5F1AC366C200A8A5BE /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EEE4BE601AC366C200A8A5BE /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EEE4BE6E1AC366C200A8A5BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EEE4BE6F1AC366C200A8A5BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EEE4BE711AC366C200A8A5BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B30102F5A987E0B94321F14 /* Pods-CubeRunner.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CubeRunner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EEE4BE721AC366C200A8A5BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B26CA3DDF9933AC9EE20C00 /* Pods-CubeRunner.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CubeRunner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EEE4BE741AC366C200A8A5BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CubeRunnerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CubeRunner.app/CubeRunner";
+			};
+			name = Debug;
+		};
+		EEE4BE751AC366C200A8A5BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CubeRunnerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CubeRunner.app/CubeRunner";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EEE4BE4A1AC366C200A8A5BE /* Build configuration list for PBXProject "CubeRunner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEE4BE6E1AC366C200A8A5BE /* Debug */,
+				EEE4BE6F1AC366C200A8A5BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEE4BE701AC366C200A8A5BE /* Build configuration list for PBXNativeTarget "CubeRunner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEE4BE711AC366C200A8A5BE /* Debug */,
+				EEE4BE721AC366C200A8A5BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEE4BE731AC366C200A8A5BE /* Build configuration list for PBXNativeTarget "CubeRunnerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEE4BE741AC366C200A8A5BE /* Debug */,
+				EEE4BE751AC366C200A8A5BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EEE4BE471AC366C200A8A5BE /* Project object */;
+}
