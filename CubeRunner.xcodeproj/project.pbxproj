@@ -99,8 +99,8 @@
 			children = (
 				EEE4BE761AC36BB400A8A5BE /* MenuViewController.swift */,
 				EEE4BE541AC366C200A8A5BE /* AppDelegate.swift */,
-				EEE4BE561AC366C200A8A5BE /* art.scnassets */,
 				EEE4BE581AC366C200A8A5BE /* GameViewController.swift */,
+				EEE4BE561AC366C200A8A5BE /* art.scnassets */,
 				EEE4BE5A1AC366C200A8A5BE /* Main.storyboard */,
 				EEE4BE5D1AC366C200A8A5BE /* Images.xcassets */,
 				EEE4BE5F1AC366C200A8A5BE /* LaunchScreen.xib */,
