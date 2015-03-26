@@ -32,13 +32,15 @@ class GameViewController: UIViewController {
 private extension GameViewController {
     func createContents() {
         scene = SCNScene(named: "art.scnassets/eurofighter.dae")
+        scene.background.contents = UIImage(named: "sky")
         scnView.showsStatistics = true
-        
         //...
         cameraNode = createCamera()
         scene.rootNode.addChildNode(cameraNode)
         
         let jetfighterNode = createJetfighter()
+        scene.rootNode.addChildNode(createFloor())
+        //...
         
         scnView.scene = scene
     }
@@ -58,5 +60,13 @@ private extension GameViewController {
         cameraNode.position = SCNVector3Make(0, 7, 20)
         cameraNode.rotation = SCNVector4Make(1, 0, 0, -atan2f(7, 20.0))
         return cameraNode
+    }
+    
+    func createFloor() -> SCNNode {
+        let floor = SCNFloor()
+        floor.firstMaterial!.diffuse.contents = UIImage(named: "moon")
+        floor.firstMaterial!.diffuse.contentsTransform = SCNMatrix4MakeScale(2, 2, 1)
+        floor.reflectivity = 0
+        return SCNNode(geometry: floor)
     }
 }
