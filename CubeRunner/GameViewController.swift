@@ -9,12 +9,14 @@
 import UIKit
 import QuartzCore
 import SceneKit
+import CoreMotion
 
 class GameViewController: UIViewController {
     private let scnView = SCNView()
     private var scene: SCNScene!
     private var cameraNode: SCNNode!
     //...
+    private var motionManager : CMMotionManager?
     //...
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +42,36 @@ private extension GameViewController {
         
         let jetfighterNode = createJetfighter()
         scene.rootNode.addChildNode(createFloor())
+        
+        let moveForwardAction = SCNAction.repeatActionForever(
+            SCNAction.moveByX(0, y: 0, z: -100, duration: 7))
+        cameraNode.runAction(moveForwardAction)
+        jetfighterNode.runAction(moveForwardAction)
+
+        motionManager = CMMotionManager()
+        motionManager?.deviceMotionUpdateInterval = 1.0 / 60.0
+        motionManager?.startDeviceMotionUpdatesUsingReferenceFrame(
+            CMAttitudeReferenceFrameXArbitraryZVertical,
+            toQueue: NSOperationQueue.mainQueue(),
+            withHandler: { (motion: CMDeviceMotion!, error: NSError!) -> Void in
+                let roll = CGFloat(motion.attitude.roll)
+                
+                let rotateCamera =
+                SCNAction.rotateByAngle(roll/20.0,
+                                        aroundAxis: SCNVector3(x: 0, y: 0, z: 1),
+                                        duration: 0.1)
+                self.cameraNode.runAction(rotateCamera)
+                
+                let rotateJetfighter =
+                SCNAction.rotateByAngle(roll/10.0,
+                                        aroundAxis: SCNVector3(x: 0, y: 0, z: 1),
+                                        duration: 0.1)
+                jetfighterNode.runAction(rotateJetfighter)
+                
+                let actionMove = SCNAction.moveByX(roll, y: 0, z: 0, duration: 0.1)
+                self.cameraNode.runAction(actionMove)
+                jetfighterNode.runAction(actionMove)
+        })
         //...
         
         scnView.scene = scene
