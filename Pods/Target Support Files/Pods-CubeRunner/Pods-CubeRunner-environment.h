@@ -30,3 +30,15 @@
 #define COCOAPODS_VERSION_MINOR_HTPressableButton_All 3
 #define COCOAPODS_VERSION_PATCH_HTPressableButton_All 1
 
+// SAMCubicSpline
+#define COCOAPODS_POD_AVAILABLE_SAMCubicSpline
+#define COCOAPODS_VERSION_MAJOR_SAMCubicSpline 0
+#define COCOAPODS_VERSION_MINOR_SAMCubicSpline 1
+#define COCOAPODS_VERSION_PATCH_SAMCubicSpline 1
+
+// SwiftCubicSpline
+#define COCOAPODS_POD_AVAILABLE_SwiftCubicSpline
+#define COCOAPODS_VERSION_MAJOR_SwiftCubicSpline 0
+#define COCOAPODS_VERSION_MINOR_SwiftCubicSpline 1
+#define COCOAPODS_VERSION_PATCH_SwiftCubicSpline 0
+
