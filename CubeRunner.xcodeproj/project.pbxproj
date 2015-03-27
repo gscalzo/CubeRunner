@@ -16,6 +16,8 @@
 		EEE4BE611AC366C200A8A5BE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEE4BE5F1AC366C200A8A5BE /* LaunchScreen.xib */; };
 		EEE4BE6D1AC366C200A8A5BE /* CubeRunnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4BE6C1AC366C200A8A5BE /* CubeRunnerTests.swift */; };
 		EEE4BE771AC36BB400A8A5BE /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4BE761AC36BB400A8A5BE /* MenuViewController.swift */; };
+		EEE4BE951AC4D43F00A8A5BE /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4BE941AC4D43F00A8A5BE /* MusicPlayer.swift */; };
+		EEE4BE971AC4D57C00A8A5BE /* Space 1990-B.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EEE4BE961AC4D57C00A8A5BE /* Space 1990-B.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		EEE4BE6B1AC366C200A8A5BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EEE4BE6C1AC366C200A8A5BE /* CubeRunnerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CubeRunnerTests.swift; sourceTree = "<group>"; };
 		EEE4BE761AC36BB400A8A5BE /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		EEE4BE941AC4D43F00A8A5BE /* MusicPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
+		EEE4BE961AC4D57C00A8A5BE /* Space 1990-B.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Space 1990-B.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 		EEE4BE511AC366C200A8A5BE /* CubeRunner */ = {
 			isa = PBXGroup;
 			children = (
+				EEE4BE961AC4D57C00A8A5BE /* Space 1990-B.mp3 */,
+				EEE4BE941AC4D43F00A8A5BE /* MusicPlayer.swift */,
 				EEE4BE761AC36BB400A8A5BE /* MenuViewController.swift */,
 				EEE4BE541AC366C200A8A5BE /* AppDelegate.swift */,
 				EEE4BE581AC366C200A8A5BE /* GameViewController.swift */,
@@ -226,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEE4BE611AC366C200A8A5BE /* LaunchScreen.xib in Resources */,
+				EEE4BE971AC4D57C00A8A5BE /* Space 1990-B.mp3 in Resources */,
 				EEE4BE5E1AC366C200A8A5BE /* Images.xcassets in Resources */,
 				EEE4BE571AC366C200A8A5BE /* art.scnassets in Resources */,
 				EEE4BE5C1AC366C200A8A5BE /* Main.storyboard in Resources */,
@@ -296,6 +303,7 @@
 			files = (
 				EEE4BE591AC366C200A8A5BE /* GameViewController.swift in Sources */,
 				EEE4BE771AC36BB400A8A5BE /* MenuViewController.swift in Sources */,
+				EEE4BE951AC4D43F00A8A5BE /* MusicPlayer.swift in Sources */,
 				EEE4BE551AC366C200A8A5BE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -21,6 +21,7 @@ class GameViewController: UIViewController {
     private let scoreLbl = UILabel()
     private var scoreTimer: NSTimer!
     private var score = 0
+    private let musicPlayer = MusicPlayer(filename: "Space 1990-B", type: "mp3")
     //...
     private var motionManager : CMMotionManager?
     private let spline = CubicSpline(points: [
@@ -41,6 +42,16 @@ class GameViewController: UIViewController {
         
         createContents()
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        musicPlayer.play()
+    }
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        musicPlayer.stop()
+    }
+
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
