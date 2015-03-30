@@ -10,7 +10,9 @@ import UIKit
 import QuartzCore
 import SceneKit
 import CoreMotion
+//...
 import SwiftCubicSpline
+import SIAlertView
 
 enum BodyType : Int {
     case jetfighter   = 1  // (1 << 0)
@@ -41,6 +43,8 @@ class GameViewController: UIViewController {
         CGPoint(x: 1.0, y: 0.5)
         ])
     //...
+    private var gameOver: () -> Void = {}
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         scnView.frame = view.bounds
@@ -57,9 +61,13 @@ class GameViewController: UIViewController {
         super.viewDidDisappear(animated)
         musicPlayer.stop()
     }
-
+    
     override func prefersStatusBarHidden() -> Bool {
         return true
+    }
+    
+    deinit{
+        println("deinit")
     }
 }
 
@@ -73,7 +81,7 @@ private extension GameViewController {
         //...
         cameraNode = createCamera()
         scene.rootNode.addChildNode(cameraNode)
-
+        
         let jetfighterNode = createJetfighter()
         scene.rootNode.addChildNode(createFloor())
         
@@ -81,7 +89,7 @@ private extension GameViewController {
             SCNAction.moveByX(0, y: 0, z: -100, duration: 7))
         cameraNode.runAction(moveForwardAction)
         jetfighterNode.runAction(moveForwardAction)
-
+        
         motionManager = CMMotionManager()
         motionManager?.deviceMotionUpdateInterval = 1.0 / 60.0
         motionManager?.startDeviceMotionUpdatesUsingReferenceFrame(
@@ -93,14 +101,14 @@ private extension GameViewController {
                 
                 let rotateCamera =
                 SCNAction.rotateByAngle(roll/20.0,
-                                        aroundAxis: SCNVector3(x: 0, y: 0, z: 1),
-                                        duration: 0.1)
+                    aroundAxis: SCNVector3(x: 0, y: 0, z: 1),
+                    duration: 0.1)
                 self.cameraNode.runAction(rotateCamera)
                 
                 let rotateJetfighter =
                 SCNAction.rotateByAngle(roll/10.0,
-                                        aroundAxis: SCNVector3(x: 0, y: 0, z: 1),
-                                        duration: 0.1)
+                    aroundAxis: SCNVector3(x: 0, y: 0, z: 1),
+                    duration: 0.1)
                 jetfighterNode.runAction(rotateJetfighter)
                 
                 let actionMove = SCNAction.moveByX(roll, y: 0, z: 0, duration: 0.1)
@@ -118,6 +126,26 @@ private extension GameViewController {
         //...
         
         scnView.scene = scene
+        gameOver = { [unowned self] in
+            self.laneTimer.invalidate()
+            self.scoreTimer.invalidate()
+            self.scene.physicsWorld.contactDelegate = nil
+            self.cameraNode.removeAllActions()
+            jetfighterNode.removeAllActions()
+            //...
+            self.motionManager?.stopDeviceMotionUpdates()
+            execInMainThread(){
+                self.askToPlayAgain(onPlayAgainPressed: {
+                    self.createContents()
+                    return
+                    },
+                    onCancelPressed: {
+                        self.dismissViewControllerAnimated(true, completion: nil)
+                        return
+                    }
+                )
+            }
+        }
     }
     
     func createJetfighter() -> SCNNode{
@@ -134,7 +162,7 @@ private extension GameViewController {
             shape: SCNPhysicsShape(node: jetfighterBodyNode, options: nil))
         jetfighterNode.physicsBody!.categoryBitMask = BodyType.jetfighter.rawValue
         jetfighterNode.physicsBody!.collisionBitMask = BodyType.cube.rawValue
-
+        
         return jetfighterNode
     }
     
@@ -204,7 +232,7 @@ private extension GameViewController {
         cubeNode.physicsBody!.categoryBitMask = BodyType.cube.rawValue
         cubeNode.physicsBody!.collisionBitMask = BodyType.jetfighter.rawValue
         //...
-
+        
         cube.firstMaterial!.diffuse.contents = {
             switch arc4random_uniform(4) {
             case 0:
@@ -233,11 +261,13 @@ private extension GameViewController {
 extension GameViewController: SCNPhysicsContactDelegate{
     func physicsWorld(world: SCNPhysicsWorld,
         didBeginContact contact: SCNPhysicsContact){
+            //..
             let contactMask = contact.nodeA.physicsBody!.categoryBitMask | contact.nodeB.physicsBody!.categoryBitMask
             switch (contactMask) {
             case BodyType.jetfighter.rawValue |  BodyType.cube.rawValue:
                 println("Contact!")
-//                gameOver(contact.nodeA, contact.nodeB)
+                //                gameOver(contact.nodeA, contact.nodeB)
+                self.gameOver()
             default:
                 return
             }
@@ -245,3 +275,13 @@ extension GameViewController: SCNPhysicsContactDelegate{
     }
 }
 
+extension GameViewController {
+    func askToPlayAgain(#onPlayAgainPressed: () -> Void,
+        onCancelPressed: () -> Void) {
+            let alertView = SIAlertView(title: "Ouch!!", andMessage: "Congratulations! Your score is \(score). Play again?")
+            
+            alertView.addButtonWithTitle("OK", type: .Default) { _ in onPlayAgainPressed() }
+            alertView.addButtonWithTitle("Cancel", type: .Default) { _ in onCancelPressed() }
+            alertView.show()
+    }
+}

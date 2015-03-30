@@ -36,6 +36,12 @@
 #define COCOAPODS_VERSION_MINOR_SAMCubicSpline 1
 #define COCOAPODS_VERSION_PATCH_SAMCubicSpline 1
 
+// SIAlertView
+#define COCOAPODS_POD_AVAILABLE_SIAlertView
+#define COCOAPODS_VERSION_MAJOR_SIAlertView 1
+#define COCOAPODS_VERSION_MINOR_SIAlertView 3
+#define COCOAPODS_VERSION_PATCH_SIAlertView 0
+
 // SwiftCubicSpline
 #define COCOAPODS_POD_AVAILABLE_SwiftCubicSpline
 #define COCOAPODS_VERSION_MAJOR_SwiftCubicSpline 0

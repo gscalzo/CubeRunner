@@ -52,6 +52,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'Cartography.framework'
   install_framework 'HTPressableButton.framework'
   install_framework 'SAMCubicSpline.framework'
+  install_framework 'SIAlertView.framework'
   install_framework 'SwiftCubicSpline.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -59,5 +60,6 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Cartography.framework'
   install_framework 'HTPressableButton.framework'
   install_framework 'SAMCubicSpline.framework'
+  install_framework 'SIAlertView.framework'
   install_framework 'SwiftCubicSpline.framework'
 fi
