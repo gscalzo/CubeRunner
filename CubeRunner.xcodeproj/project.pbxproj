@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1C793BE5F77E8E1E87217EBC /* Pods_CubeRunner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 874A0E308794DDCC3B30C485 /* Pods_CubeRunner.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		EE230A231ACA040400C58C6A /* utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE230A221ACA040400C58C6A /* utilities.swift */; };
+		EE230A261ACA152200C58C6A /* FireParticles.scnp in Resources */ = {isa = PBXBuildFile; fileRef = EE230A241ACA152200C58C6A /* FireParticles.scnp */; };
+		EE230A271ACA152200C58C6A /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = EE230A251ACA152200C58C6A /* spark.png */; };
 		EEE4BE551AC366C200A8A5BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4BE541AC366C200A8A5BE /* AppDelegate.swift */; };
 		EEE4BE571AC366C200A8A5BE /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = EEE4BE561AC366C200A8A5BE /* art.scnassets */; };
 		EEE4BE591AC366C200A8A5BE /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4BE581AC366C200A8A5BE /* GameViewController.swift */; };
@@ -36,6 +38,8 @@
 		3B30102F5A987E0B94321F14 /* Pods-CubeRunner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CubeRunner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CubeRunner/Pods-CubeRunner.debug.xcconfig"; sourceTree = "<group>"; };
 		874A0E308794DDCC3B30C485 /* Pods_CubeRunner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CubeRunner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE230A221ACA040400C58C6A /* utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = utilities.swift; sourceTree = "<group>"; };
+		EE230A241ACA152200C58C6A /* FireParticles.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = FireParticles.scnp; sourceTree = "<group>"; };
+		EE230A251ACA152200C58C6A /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		EEE4BE4F1AC366C200A8A5BE /* CubeRunner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CubeRunner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEE4BE531AC366C200A8A5BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EEE4BE541AC366C200A8A5BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 		EEE4BE521AC366C200A8A5BE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EE230A241ACA152200C58C6A /* FireParticles.scnp */,
+				EE230A251ACA152200C58C6A /* spark.png */,
 				EEE4BE531AC366C200A8A5BE /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -235,7 +241,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEE4BE611AC366C200A8A5BE /* LaunchScreen.xib in Resources */,
+				EE230A261ACA152200C58C6A /* FireParticles.scnp in Resources */,
 				EEE4BE971AC4D57C00A8A5BE /* Space 1990-B.mp3 in Resources */,
+				EE230A271ACA152200C58C6A /* spark.png in Resources */,
 				EEE4BE5E1AC366C200A8A5BE /* Images.xcassets in Resources */,
 				EEE4BE571AC366C200A8A5BE /* art.scnassets in Resources */,
 				EEE4BE5C1AC366C200A8A5BE /* Main.storyboard in Resources */,

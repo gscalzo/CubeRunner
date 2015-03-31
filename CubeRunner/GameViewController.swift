@@ -13,6 +13,7 @@ import CoreMotion
 //...
 import SwiftCubicSpline
 import SIAlertView
+import AudioToolbox.AudioServices
 
 enum BodyType : Int {
     case jetfighter   = 1  // (1 << 0)
@@ -43,7 +44,7 @@ class GameViewController: UIViewController {
         CGPoint(x: 1.0, y: 0.5)
         ])
     //...
-    private var gameOver: () -> Void = {}
+    private var gameOver: (SCNNode, SCNNode) -> Void = {_,_ in}
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -126,15 +127,19 @@ private extension GameViewController {
         //...
         
         scnView.scene = scene
-        gameOver = { [unowned self] in
+        gameOver = { [unowned self] nodeA, nodeB in
             self.laneTimer.invalidate()
             self.scoreTimer.invalidate()
             self.scene.physicsWorld.contactDelegate = nil
+            //...
             self.cameraNode.removeAllActions()
             jetfighterNode.removeAllActions()
-            //...
+            self.explodeNode(nodeA)
+            self.explodeNode(nodeB)
             self.motionManager?.stopDeviceMotionUpdates()
-            execInMainThread(){
+            //...
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+            execAfter(1){
                 self.askToPlayAgain(onPlayAgainPressed: {
                     self.createContents()
                     return
@@ -266,8 +271,7 @@ extension GameViewController: SCNPhysicsContactDelegate{
             switch (contactMask) {
             case BodyType.jetfighter.rawValue |  BodyType.cube.rawValue:
                 println("Contact!")
-                //                gameOver(contact.nodeA, contact.nodeB)
-                self.gameOver()
+                gameOver(contact.nodeA, contact.nodeB)
             default:
                 return
             }
@@ -284,4 +288,11 @@ extension GameViewController {
             alertView.addButtonWithTitle("Cancel", type: .Default) { _ in onCancelPressed() }
             alertView.show()
     }
+    
+    func explodeNode(node: SCNNode){
+        let fire = SCNParticleSystem(named: "FireParticles", inDirectory: nil)
+        fire.emitterShape = node.geometry
+        node.addParticleSystem(fire)
+    }
+    
 }
