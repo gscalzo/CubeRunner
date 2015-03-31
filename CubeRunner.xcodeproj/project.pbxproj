@@ -11,6 +11,8 @@
 		EE230A231ACA040400C58C6A /* utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE230A221ACA040400C58C6A /* utilities.swift */; };
 		EE230A261ACA152200C58C6A /* FireParticles.scnp in Resources */ = {isa = PBXBuildFile; fileRef = EE230A241ACA152200C58C6A /* FireParticles.scnp */; };
 		EE230A271ACA152200C58C6A /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = EE230A251ACA152200C58C6A /* spark.png */; };
+		EE8A28A81ACB4BBE001A34FE /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE8A28A71ACB4BBE001A34FE /* GameKit.framework */; };
+		EE8A28AA1ACB4FE3001A34FE /* GameCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8A28A91ACB4FE3001A34FE /* GameCenter.swift */; };
 		EEE4BE551AC366C200A8A5BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4BE541AC366C200A8A5BE /* AppDelegate.swift */; };
 		EEE4BE571AC366C200A8A5BE /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = EEE4BE561AC366C200A8A5BE /* art.scnassets */; };
 		EEE4BE591AC366C200A8A5BE /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4BE581AC366C200A8A5BE /* GameViewController.swift */; };
@@ -40,6 +42,8 @@
 		EE230A221ACA040400C58C6A /* utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = utilities.swift; sourceTree = "<group>"; };
 		EE230A241ACA152200C58C6A /* FireParticles.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = FireParticles.scnp; sourceTree = "<group>"; };
 		EE230A251ACA152200C58C6A /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		EE8A28A71ACB4BBE001A34FE /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		EE8A28A91ACB4FE3001A34FE /* GameCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCenter.swift; sourceTree = "<group>"; };
 		EEE4BE4F1AC366C200A8A5BE /* CubeRunner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CubeRunner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEE4BE531AC366C200A8A5BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EEE4BE541AC366C200A8A5BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +66,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C793BE5F77E8E1E87217EBC /* Pods_CubeRunner.framework in Frameworks */,
+				EE8A28A81ACB4BBE001A34FE /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +112,7 @@
 		EEE4BE511AC366C200A8A5BE /* CubeRunner */ = {
 			isa = PBXGroup;
 			children = (
+				EE8A28A91ACB4FE3001A34FE /* GameCenter.swift */,
 				EE230A221ACA040400C58C6A /* utilities.swift */,
 				EEE4BE961AC4D57C00A8A5BE /* Space 1990-B.mp3 */,
 				EEE4BE941AC4D43F00A8A5BE /* MusicPlayer.swift */,
@@ -152,6 +158,7 @@
 		F978DBA7A8F8A74EFF4D0551 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EE8A28A71ACB4BBE001A34FE /* GameKit.framework */,
 				874A0E308794DDCC3B30C485 /* Pods_CubeRunner.framework */,
 			);
 			name = Frameworks;
@@ -209,6 +216,12 @@
 				TargetAttributes = {
 					EEE4BE4E1AC366C200A8A5BE = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = S2SVQZ2HDR;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+						};
 					};
 					EEE4BE651AC366C200A8A5BE = {
 						CreatedOnToolsVersion = 6.2;
@@ -314,6 +327,7 @@
 			files = (
 				EEE4BE591AC366C200A8A5BE /* GameViewController.swift in Sources */,
 				EE230A231ACA040400C58C6A /* utilities.swift in Sources */,
+				EE8A28AA1ACB4FE3001A34FE /* GameCenter.swift in Sources */,
 				EEE4BE771AC36BB400A8A5BE /* MenuViewController.swift in Sources */,
 				EEE4BE951AC4D43F00A8A5BE /* MusicPlayer.swift in Sources */,
 				EEE4BE551AC366C200A8A5BE /* AppDelegate.swift in Sources */,
@@ -440,10 +454,13 @@
 			baseConfigurationReference = 3B30102F5A987E0B94321F14 /* Pods-CubeRunner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CubeRunner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -452,10 +469,13 @@
 			baseConfigurationReference = 2B26CA3DDF9933AC9EE20C00 /* Pods-CubeRunner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CubeRunner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
