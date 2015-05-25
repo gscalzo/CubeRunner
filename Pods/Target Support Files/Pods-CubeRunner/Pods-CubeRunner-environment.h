@@ -15,8 +15,8 @@
 // Cartography
 #define COCOAPODS_POD_AVAILABLE_Cartography
 #define COCOAPODS_VERSION_MAJOR_Cartography 0
-#define COCOAPODS_VERSION_MINOR_Cartography 2
-#define COCOAPODS_VERSION_PATCH_Cartography 1
+#define COCOAPODS_VERSION_MINOR_Cartography 5
+#define COCOAPODS_VERSION_PATCH_Cartography 0
 
 // HTPressableButton
 #define COCOAPODS_POD_AVAILABLE_HTPressableButton
