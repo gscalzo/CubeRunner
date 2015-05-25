@@ -79,7 +79,7 @@ private extension GameViewController {
         motionManager?.deviceMotionUpdateInterval = 1.0 / 60.0
         motionManager?.startDeviceMotionUpdatesUsingReferenceFrame(
             //...
-            CMAttitudeReferenceFrameXArbitraryZVertical,
+            CMAttitudeReferenceFrame.XArbitraryZVertical,
             toQueue: NSOperationQueue.mainQueue(),
             withHandler: { (motion: CMDeviceMotion!, error: NSError!) -> Void in
                 let roll = CGFloat(motion.attitude.roll)

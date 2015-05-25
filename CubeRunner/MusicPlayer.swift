@@ -10,7 +10,7 @@ import Foundation
 import AVFoundation
 
 class MusicPlayer {
-    private let player: AVAudioPlayer?
+    private var player: AVAudioPlayer?
     
     init(filename: String, type: String){
         if let resource = NSBundle.mainBundle().pathForResource(filename, ofType: type) {
