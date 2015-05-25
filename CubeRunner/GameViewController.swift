@@ -11,7 +11,7 @@ import QuartzCore
 import SceneKit
 
 class GameViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -47,7 +47,7 @@ class GameViewController: UIViewController {
         ship.runAction(SCNAction.repeatActionForever(SCNAction.rotateByX(0, y: 2, z: 0, duration: 1)))
         
         // retrieve the SCNView
-        let scnView = self.view as SCNView
+        let scnView = self.view as! SCNView
         
         // set the scene to the view
         scnView.scene = scene
@@ -73,7 +73,7 @@ class GameViewController: UIViewController {
     
     func handleTap(gestureRecognize: UIGestureRecognizer) {
         // retrieve the SCNView
-        let scnView = self.view as SCNView
+        let scnView = self.view as! SCNView
         
         // check what nodes are tapped
         let p = gestureRecognize.locationInView(scnView)
@@ -127,5 +127,5 @@ class GameViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Release any cached data, images, etc that aren't in use.
     }
-
+    
 }
