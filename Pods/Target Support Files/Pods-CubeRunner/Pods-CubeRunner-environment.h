@@ -15,8 +15,8 @@
 // Cartography
 #define COCOAPODS_POD_AVAILABLE_Cartography
 #define COCOAPODS_VERSION_MAJOR_Cartography 0
-#define COCOAPODS_VERSION_MINOR_Cartography 2
-#define COCOAPODS_VERSION_PATCH_Cartography 1
+#define COCOAPODS_VERSION_MINOR_Cartography 5
+#define COCOAPODS_VERSION_PATCH_Cartography 0
 
 // HTPressableButton
 #define COCOAPODS_POD_AVAILABLE_HTPressableButton
@@ -29,4 +29,22 @@
 #define COCOAPODS_VERSION_MAJOR_HTPressableButton_All 1
 #define COCOAPODS_VERSION_MINOR_HTPressableButton_All 3
 #define COCOAPODS_VERSION_PATCH_HTPressableButton_All 1
+
+// SAMCubicSpline
+#define COCOAPODS_POD_AVAILABLE_SAMCubicSpline
+#define COCOAPODS_VERSION_MAJOR_SAMCubicSpline 0
+#define COCOAPODS_VERSION_MINOR_SAMCubicSpline 1
+#define COCOAPODS_VERSION_PATCH_SAMCubicSpline 1
+
+// SIAlertView
+#define COCOAPODS_POD_AVAILABLE_SIAlertView
+#define COCOAPODS_VERSION_MAJOR_SIAlertView 1
+#define COCOAPODS_VERSION_MINOR_SIAlertView 3
+#define COCOAPODS_VERSION_PATCH_SIAlertView 0
+
+// SwiftCubicSpline
+#define COCOAPODS_POD_AVAILABLE_SwiftCubicSpline
+#define COCOAPODS_VERSION_MAJOR_SwiftCubicSpline 0
+#define COCOAPODS_VERSION_MINOR_SwiftCubicSpline 1
+#define COCOAPODS_VERSION_PATCH_SwiftCubicSpline 0
 
