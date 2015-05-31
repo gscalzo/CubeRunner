@@ -22,8 +22,8 @@ Contents
  * Chapter 4:   A Pretty Weather App   
  * Chapter 5:   Flappy Swift   
  * Chapter 6:   Polishing Flappy Swift 
- * _Chapter 7:   Cube Runner_     
- * _Chapter 8:   Completing Cube Runner_
+ * *Chapter 7:   Cube Runner*     
+ * *Chapter 8:   Completing Cube Runner*
 
 Contact
 -------
