@@ -22,8 +22,8 @@ Contents
  * Chapter 4:   A Pretty Weather App   
  * Chapter 5:   Flappy Swift   
  * Chapter 6:   Polishing Flappy Swift 
- * Chapter 7:   Cube Runner     
- * Chapter 8:   Completing Cube Runner 
+ * _Chapter 7:   Cube Runner_     
+ * _Chapter 8:   Completing Cube Runner_
 
 Contact
 -------
@@ -31,7 +31,7 @@ Contact
 Follow me on Twitter: @giordanoscalzo
 http://giordanoscalzo.com
 
-The book website is http://swift-by-example.org
+The book website is http://swift-by-example.com
 
 LICENSE
 -------
