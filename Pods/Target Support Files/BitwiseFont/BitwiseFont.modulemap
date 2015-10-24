@@ -1,5 +1,5 @@
 framework module BitwiseFont {
-  umbrella header "Pods-CubeRunner-BitwiseFont-umbrella.h"
+  umbrella header "BitwiseFont-umbrella.h"
 
   export *
   module * { export * }

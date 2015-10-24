@@ -20,10 +20,10 @@ class GameViewController: UIViewController {
     //...
     override func viewDidLoad() {
         super.viewDidLoad()
-        scnView.frame = view.bounds
-        view.addSubview(scnView)
-        
-        createContents()
+//        scnView.frame = view.bounds
+//        view.addSubview(scnView)
+//        
+//        createContents()
     }
     override func prefersStatusBarHidden() -> Bool {
         return true
@@ -53,7 +53,9 @@ private extension GameViewController {
         motionManager?.startDeviceMotionUpdatesUsingReferenceFrame(
             CMAttitudeReferenceFrame.XArbitraryZVertical,
             toQueue: NSOperationQueue.mainQueue(),
-            withHandler: { (motion: CMDeviceMotion!, error: NSError!) -> Void in
+            withHandler: { (motion: CMDeviceMotion?, error: NSError?) -> Void in
+                guard let motion = motion else {return}
+                
                 let roll = CGFloat(motion.attitude.roll)
                 
                 let rotateCamera =
