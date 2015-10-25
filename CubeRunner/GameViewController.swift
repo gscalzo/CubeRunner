@@ -21,7 +21,7 @@ class GameViewController: UIViewController {
     private let scoreLbl = UILabel()
     private var scoreTimer: NSTimer!
     private var score = 0
-    private let musicPlayer = MusicPlayer(filename: "Space 1990-B", type: "mp3")
+    private var musicPlayer: MusicPlayer?
     //...
     private var motionManager : CMMotionManager?
     private let spline = CubicSpline(points: [
@@ -37,6 +37,13 @@ class GameViewController: UIViewController {
     //...
     override func viewDidLoad() {
         super.viewDidLoad()
+        do {
+            musicPlayer = try MusicPlayer(filename: "Space 1990-B", type: "mp3")
+            musicPlayer!.play()
+        } catch {
+            print("Error playing soundtrack")
+        }
+        
         scnView.frame = view.bounds
         view.addSubview(scnView)
         
@@ -45,11 +52,11 @@ class GameViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        musicPlayer.play()
+        musicPlayer?.play()
     }
     override func viewDidDisappear(animated: Bool) {
         super.viewDidDisappear(animated)
-        musicPlayer.stop()
+        musicPlayer?.stop()
     }
 
     override func prefersStatusBarHidden() -> Bool {
@@ -81,7 +88,8 @@ private extension GameViewController {
             //...
             CMAttitudeReferenceFrame.XArbitraryZVertical,
             toQueue: NSOperationQueue.mainQueue(),
-            withHandler: { (motion: CMDeviceMotion!, error: NSError!) -> Void in
+            withHandler: { (motion: CMDeviceMotion?, error: NSError?) -> Void in
+                guard let motion = motion else {return}
                 let roll = CGFloat(motion.attitude.roll)
                 
                 let rotateCamera =
@@ -165,15 +173,15 @@ private extension GameViewController {
         let normalizedZ = CGFloat(fabs(zPosInSection/200))
         let normalizedX = Float((spline.interpolate(normalizedZ) - 0.5)*laneWidth)
         
-        var cubeAtLeft = cube()
+        let cubeAtLeft = cube()
         cubeAtLeft.position = SCNVector3(x: normalizedX - 6, y: 1.0, z: zPos)
         scene.rootNode.addChildNode(cubeAtLeft)
-        var cubeAtRight = cube()
+        let cubeAtRight = cube()
         cubeAtRight.position = SCNVector3(x: normalizedX + 6, y: 1.0, z: zPos)
         scene.rootNode.addChildNode(cubeAtRight)
         //...
         if arc4random_uniform(5) < 1 {
-            var centralCube = cube(size: 1.0)
+            let centralCube = cube(1.0)
             scene.rootNode.addChildNode(centralCube)
             let xOffset = arc4random_uniform(10)
             centralCube.position = SCNVector3(x: normalizedX + Float(xOffset) - 5.0, y: 1.0, z: zPos)

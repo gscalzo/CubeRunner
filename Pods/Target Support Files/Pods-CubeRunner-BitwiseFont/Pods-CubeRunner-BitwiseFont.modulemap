@@ -1,6 +1,0 @@
-framework module BitwiseFont {
-  umbrella header "Pods-CubeRunner-BitwiseFont-umbrella.h"
-
-  export *
-  module * { export * }
-}
