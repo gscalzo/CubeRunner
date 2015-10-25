@@ -20,10 +20,10 @@ class GameViewController: UIViewController {
     //...
     override func viewDidLoad() {
         super.viewDidLoad()
-//        scnView.frame = view.bounds
-//        view.addSubview(scnView)
-//        
-//        createContents()
+        scnView.frame = view.bounds
+        view.addSubview(scnView)
+        
+        createContents()
     }
     override func prefersStatusBarHidden() -> Bool {
         return true
