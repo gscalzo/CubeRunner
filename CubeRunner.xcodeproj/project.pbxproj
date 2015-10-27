@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1C793BE5F77E8E1E87217EBC /* Pods_CubeRunner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 874A0E308794DDCC3B30C485 /* Pods_CubeRunner.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		1C793BE5F77E8E1E87217EBC /* Pods_CubeRunner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 874A0E308794DDCC3B30C485 /* Pods_CubeRunner.framework */; };
 		EE230A231ACA040400C58C6A /* utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE230A221ACA040400C58C6A /* utilities.swift */; };
 		EE230A261ACA152200C58C6A /* FireParticles.scnp in Resources */ = {isa = PBXBuildFile; fileRef = EE230A241ACA152200C58C6A /* FireParticles.scnp */; };
 		EE230A271ACA152200C58C6A /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = EE230A251ACA152200C58C6A /* spark.png */; };
