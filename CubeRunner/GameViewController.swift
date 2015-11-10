@@ -140,7 +140,7 @@ private extension GameViewController {
         jetfighterNode.physicsBody = SCNPhysicsBody(type: .Kinematic,
             shape: SCNPhysicsShape(node: jetfighterBodyNode, options: nil))
         jetfighterNode.physicsBody!.categoryBitMask = BodyType.jetfighter.rawValue
-        jetfighterNode.physicsBody!.collisionBitMask = BodyType.cube.rawValue
+        jetfighterNode.physicsBody!.contactTestBitMask = BodyType.cube.rawValue
 
         return jetfighterNode
     }
@@ -209,7 +209,7 @@ private extension GameViewController {
         let cubeNode = SCNNode(geometry: cube)
         cubeNode.physicsBody = SCNPhysicsBody(type: .Static, shape: SCNPhysicsShape(node: cubeNode, options: nil))
         cubeNode.physicsBody!.categoryBitMask = BodyType.cube.rawValue
-        cubeNode.physicsBody!.collisionBitMask = BodyType.jetfighter.rawValue
+        cubeNode.physicsBody!.contactTestBitMask = BodyType.jetfighter.rawValue
         //...
 
         cube.firstMaterial!.diffuse.contents = {
@@ -244,7 +244,6 @@ extension GameViewController: SCNPhysicsContactDelegate{
             switch (contactMask) {
             case BodyType.jetfighter.rawValue |  BodyType.cube.rawValue:
                 print("Contact!")
-//                gameOver(contact.nodeA, contact.nodeB)
             default:
                 return
             }
